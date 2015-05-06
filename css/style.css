@@ -1,6 +1,7 @@
 body {
 	background:#03a9f4; 
 	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
 }
 
 .navbar {
@@ -11,8 +12,53 @@ body {
 	background: #fff;
 	padding: 20px;
 	margin-top: 40px;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
 	border-radius: 0;
+}
+
+.separator {
+	margin-bottom: 	20px;
+	margin-top: 	20px;
+}
+
+.footer {
+	text-align: center;
+	color: #fff;
+	padding: 20px;
+	font-size: 12pt;
+}
+
+.tab-pane {
+	padding: 20px;
+}
+
+.btn {
+	border-radius: 0 !important;
+}
+
+input[type="text"],
+input[type="password"] {
+	border-radius: 0 !important;
+}
+
+.nav > li > a {
+	border-radius: 0 !important;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	border-top: 1px solid #fff !important;
+}
+
+.nav-tabs>li:first-child.active>a, .nav-tabs>li:first-child.active>a:focus, .nav-tabs>li:first-child.active>a:hover {
+	border-left: 1px solid #fff !important;
+}
+
+.tabcontainer {
+	border: 1px solid #ddd;
+	margin-bottom: 20px;
 }

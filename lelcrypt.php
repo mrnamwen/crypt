@@ -41,7 +41,7 @@
             }
         }
         catch (Exception $e) {
-            header('Location: http://wesh.gift/crypt/?error');
+            header('Location: https://wesh.gift/crypt/?error');
         }
     }
 
@@ -113,7 +113,7 @@
                 	echo "your id is " . $id;
                     unlink($rootfile);
    
-                    header('Location: http://wesh.gift/crypt/?id=' . $id);
+                    header('Location: https://wesh.gift/crypt/?id=' . $id);
                     $backend->dbh = null;
                 }
                 catch (PDOException $e) {
