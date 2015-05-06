@@ -6,9 +6,6 @@
     include 'backend.php';
 
     $backend = new Backend();
-
-    $catid = (int) $_POST['catid'];
-    $name = $_POST['name'];
     $pass = $_POST["pass"];
     $upload = $_POST["upload"];
     $decrypt = $_POST["decrypt"];
@@ -55,7 +52,7 @@
         /*** cycle through all files in the directory ***/
         foreach (glob($dir."*") as $file) {
             $ext = pathinfo($file, PATHINFO_EXTENSION);
-            /*** if file is 24 hours (86400 seconds) old then delete it ***/
+            /*** if file is 5 minutes old then delete it ***/
             if ($ext != "aes") { 
                 if (filemtime($file) < time() - 300) {
                     unlink($file);
@@ -67,9 +64,7 @@
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["file"]["name"]);
         $uploadOk = 1;
-        $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         
-        // Check if image file is a actual image or fake image
         if(isset($_POST["submit"])) {
             $uploadOk = 1;
         }
